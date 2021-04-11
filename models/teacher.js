@@ -12,6 +12,9 @@ const UserSchema = Schema({
     password:{
         type:String
     },
+    token:{
+        type:String  
+    }
 	
 },{timestamps : true});
 

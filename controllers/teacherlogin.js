@@ -28,7 +28,7 @@ const loginUser = async (req,res)=>{
             userDetailsInDatabase.token = refreshToken
             userDetailsInDatabase.save()
 
-         res.json({Status:200,"Response":token,"RefreshToken":refreshToken});
+         res.json({Status:200,"Response":token,"RefreshToken":refreshToken,msg:{name:userDetailsInDatabase.name,teacherId:userDetailsInDatabase._id}});
          cluster.worker.kill();
          
         } catch (error) {
